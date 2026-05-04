@@ -2,7 +2,7 @@
 # Zen-Browser-macOS-Traffic-Light-Buttons
 This is a .css file for Zen Browser that has macOS traffic light buttons. I made this myself! I will be updating it if an update breaks because Zen is my main browser.
 
-.<img width="2480" height="3508" alt="thing" src="https://github.com/user-attachments/assets/099e48e7-66a5-47f1-9ff3-4b885d84a43d" />
+.<img width="400" height="400" alt="thing" src="https://github.com/user-attachments/assets/099e48e7-66a5-47f1-9ff3-4b885d84a43d" />
 
 Installation Guide:
 1. Go into %appdata%\zen\profiles. Choose the one that has "(release)" in it's name
