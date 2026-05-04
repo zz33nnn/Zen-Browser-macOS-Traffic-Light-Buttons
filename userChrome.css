@@ -69,7 +69,6 @@
   margin-top: -1px !important;
 }
 
-/* Groups Max and Restore to use the same Plus icon */
 .titlebar-max::after, .titlebar-restore::after { 
   content: "＋" !important; 
   font-size: 16px !important;
@@ -88,24 +87,31 @@
   transform: scale(1.1) !important;
 }
 
-/* Applies hover scaling to both Max and Restore */
 .titlebar-max:hover::after, .titlebar-restore:hover::after {
   transform: scale(1.2) !important;
 }
 
-/* Button Base Colors */
+/* Button Base Colors & Order */
 .titlebar-close { order: 0 !important; }
 .titlebar-close::before { background: #ff5f56 !important; border: 0.5px solid #e0443e !important; }
 
 .titlebar-min { order: 1 !important; }
 .titlebar-min::before { background: #ffbd2e !important; border: 0.5px solid #dea123 !important; }
 
-/* Sets position and color for both states */
 .titlebar-max, .titlebar-restore { 
   order: 2 !important; 
-  display: grid !important; /* Ensures the button is visible in both states */
+  display: grid !important; 
 }
 .titlebar-max::before, .titlebar-restore::before { 
   background: #27c93f !important; 
   border: 0.5px solid #1aab29 !important; 
+}
+
+/* STATE-BASED TOGGLE: Prevents double buttons and makes 'un-maximize' work */
+:root:not([sizemode="maximized"]) .titlebar-restore {
+  display: none !important;
+}
+
+:root[sizemode="maximized"] .titlebar-max {
+  display: none !important;
 }
