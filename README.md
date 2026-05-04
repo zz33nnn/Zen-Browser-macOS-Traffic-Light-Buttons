@@ -12,3 +12,5 @@ Installation Guide:
 3. Now, you'll have to go into "about:config" and toggle "toolkit.legacyUserProfileCustomizations.stylesheets" to true
 4. (OPTIONAL) Toggle "zen.view.experimental-force-window-controls-left" to true
 5. Restart your browser
+
+No, I do not plan on making it accurate to the latest version. I've been trying for 15 minutes and I can't figure out how to do it properly.
