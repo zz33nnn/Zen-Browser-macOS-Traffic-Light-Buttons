@@ -1,0 +1,105 @@
+/* 5. MACOS TRAFFIC LIGHTS + SYNCED EXPANSION */
+:root {
+  --zen-window-controls-location: left !important;
+}
+
+.titlebar-buttonbox-container {
+  margin-left: 12px !important;
+  margin-right: 8px !important;
+  order: -1 !important;
+}
+
+/* DISABLE BUTTON TOOLTIPS (Inner elements) */
+.titlebar-button > .toolbarbutton-icon,
+.titlebar-button > .toolbarbutton-badge-stack,
+.titlebar-button > image {
+  display: none !important;
+  pointer-events: none !important; 
+}
+
+.titlebar-button {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 3px !important;
+  width: 18px !important; 
+  height: 32px !important;
+  display: grid !important; 
+  place-items: center !important;
+  position: relative !important;
+}
+
+/* Base Circles */
+.titlebar-button::before {
+  content: "" !important;
+  grid-area: 1 / 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  display: block !important;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  pointer-events: none !important;
+}
+
+/* Symbols - Centered with Transparency */
+.titlebar-button::after {
+  content: "" !important;
+  grid-area: 1 / 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  font-family: "Segoe UI", sans-serif !important;
+  font-weight: 1000 !important;
+  color: rgba(0, 0, 0, 0.4) !important; 
+  opacity: 0 !important;
+  transform: scale(0) !important;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  pointer-events: none !important;
+}
+
+/* Character Specifics & Final Nudges */
+.titlebar-close::after { 
+  content: "✕" !important; 
+  font-size: 11px !important;
+}
+
+.titlebar-min::after { 
+  content: "—" !important; 
+  font-size: 11px !important;
+  margin-top: -1px !important;
+}
+
+.titlebar-max::after, .titlebar-restore::after { 
+  content: "＋" !important; 
+  font-size: 16px !important;
+  /* FINAL NUDGE: 3px Up (-3px) and 1px Right (Result of nudging 2px left from 3px) */
+  margin-top: -3px !important; 
+  margin-left: 1px !important; 
+}
+
+/* HOVER LOGIC */
+.titlebar-button:hover::before {
+  transform: scale(1.5) !important;
+  filter: brightness(1.05) !important;
+}
+
+.titlebar-button:hover::after {
+  opacity: 1 !important;
+  transform: scale(1.1) !important;
+}
+
+.titlebar-max:hover::after {
+  transform: scale(1.2) !important;
+}
+
+/* Button Base Colors */
+.titlebar-close { order: 0 !important; }
+.titlebar-close::before { background: #ff5f56 !important; border: 0.5px solid #e0443e !important; }
+
+.titlebar-min { order: 1 !important; }
+.titlebar-min::before { background: #ffbd2e !important; border: 0.5px solid #dea123 !important; }
+
+.titlebar-max, .titlebar-restore { order: 2 !important; }
+.titlebar-max::before, .titlebar-restore::before { background: #27c93f !important; border: 0.5px solid #1aab29 !important; }
+
+.titlebar-restore { display: none !important; }
