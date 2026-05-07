@@ -12,7 +12,7 @@ Installation Guide:
 1. Go into %appdata%\zen\profiles. Choose the one that has "(release)" in it's name
 2. Import the userchrome.css
 3. Now, you'll have to go into "about:config" and toggle "toolkit.legacyUserProfileCustomizations.stylesheets" to true
-4. (THIS IS NOW FORCED IN THE CONFIG, YOU CAN IGNORE THIS) Toggle "zen.view.experimental-force-window-controls-left" to true
+4. Toggle "zen.view.experimental-force-window-controls-left" to true (Yes, this is needed. If you don't do it you'll have to move your cursor to the top and then to the left.)
 5. Restart your browser
 
 No, I do not plan on making it accurate to the latest version. I've been trying for 30 minutes and I can't figure out how to do it properly.
